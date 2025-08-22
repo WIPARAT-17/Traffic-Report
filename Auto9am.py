@@ -57,7 +57,7 @@ print(f"ตั้งค่าการดาวน์โหลดไปที่
 
 # เพิ่ม arguments สำหรับ Edge
 edge_options.add_argument("--disable-popup-blocking")  # ปิดการบล็อกป๊อปอัพ
-'''
+
 # ตั้งค่า Headless Mode ตามการกำหนดค่าในไฟล์ config
 if webdriver_config["headless_mode"]:
     print("🚀 เริ่มต้นโปรแกรม Auto9am - โหมดเบื้องหลัง (Headless Mode)")
@@ -75,7 +75,7 @@ if webdriver_config["headless_mode"]:
     edge_options.add_argument(f"--window-size={webdriver_config['window_size']}")  # กำหนดขนาดหน้าต่าง
     edge_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59")  # กำหนด user agent
 else:
-    print("🖥️ เริ่มต้นโปรแกรม Auto9am - โหมดแสดงหน้าจอ")'''
+    print("🖥️ เริ่มต้นโปรแกรม Auto9am - โหมดแสดงหน้าจอ")
 
 # ตั้งค่า preferences
 edge_options.add_experimental_option("prefs", prefs)
@@ -400,4 +400,5 @@ except Exception as e:
     print(f"เกิดข้อผิดพลาด: {e}")
     
 finally:
+
    driver.quit()
